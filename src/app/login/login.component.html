@@ -1,28 +1,15 @@
-<p>
-
-</p>
-<div class="container pt-12">
-  <div class="row justify-content-sm-center">
-    <div class="col-sm-6 col-md-4">
-
-      <div class="card border-info text-center">
-        <div class="card-header">
-          Sign in to continue
-        </div>
-        <div class="card-body">
-          <img src="https://placeimg.com/128/128/tech/sepia">
-          <h4 class="text-center">Classroom Meet</h4>
-          <form class="form-signin">
-            <input type="text" class="form-control mb-2" placeholder="Email" required autofocus>
-            <input type="password" class="form-control mb-2" placeholder="Password" required>
-            <button class="btn btn-lg btn-primary btn-block mb-1" type="submit">Sign in</button>
-          </form>
-        </div>
-      </div>
-      <!-- <a href="#" class="float-right">Create an account </a> -->
-      <a [routerLink]="['/register']" class="float-right">Register</a>
-    </div>
-  </div>
+<div class = "loginContainer">
+  <form class="form-signin">
+    <!-- <img class="mb-4" src="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfa0qfD71UQx0PWqms+LiYV9wJ6zHl5i...dp8fs4Lh4A5EdO3U1ON5MwiSF...VYMTjhhk...w=="> -->
+    <!-- <img src="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfa0qfD71UQx0PWqms+LiYV9wJ6zHl5i...dp8fs4IxsB5EdO3U1ON5MwiSF...VYMTjxxi9w=="> -->
+    <img src="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfa0qfD71UQx0PWqms+LiYV9wJ6zHl5i...dp8fs...LhsJ4UdO3U1ON5MwiSF...VYMTjxNk9w==">
+    
+    <h5 class="h5 mb-3">Sign In to your Account</h5>
+    <label for="inputEmail" >Email address</label>
+    <input type="email" [(ngModel)]="loginRequest.email" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+    <label for="inputPassword" >Password</label>
+    <input type="password" [(ngModel)]="loginRequest.password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required="">
+    <button class="btn btn-lg btn-primary btn-block" (click)="firstClick()">Sign in</button>
+    <p>Don't have an account? <a [routerLink]="['/register']">Register</a></p>
+  </form>
 </div>
-
-
